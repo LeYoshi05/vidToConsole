@@ -1,0 +1,12 @@
+# Install these dependencies by
+# first installing Python 3.7 or newer, then running
+# python -m pip install -r requirements.txt
+# in the directory you downloaded the program to.
+# 
+# DO NOT change this File in any way, as that might
+# cause the dependencies to not be installed correctly
+
+opencv-python
+pathlib
+termcolor
+

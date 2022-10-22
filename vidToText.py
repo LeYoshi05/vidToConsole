@@ -1,3 +1,13 @@
+#Copyright (c) 2022, LeYoshi05
+#All rights reserved.
+
+#This source code is licensed under the BSD-style license found in the
+#LICENSE file in the root directory of this source tree. 
+
+
+
+
+
 from turtle import color
 import cv2
 from pathlib import Path
@@ -9,8 +19,12 @@ import os
 
 
 colorEnabled = True
-lines = 60
-chars = 60
+
+#--------------------------
+lines = 60#Adjust these variables
+chars = 60#to suit your needs.
+#------------------------
+
 fps = 60
 
 def move (y, x):
@@ -99,7 +113,6 @@ yn = input("Do you want to disable the color? (Y/N): ")
 while(yn != "y" and yn != "n" and yn != "Y" and yn != "N"):
     print("Error. Please enter 'Y' for yes and 'N' for no")
     yn = input("Do you want to disable the color? (Y/N): ")
-print("yn:", yn)
     
 if(yn == "N" or yn == "n"):
     print("Color enabled.")
@@ -116,7 +129,7 @@ dir = os.getcwd()
 
 print("Loading complete.")
 
-input("Press any key to start...")
+input("Press Enter to start...")
 
 success,image = vidcap.read()
 count = 0
