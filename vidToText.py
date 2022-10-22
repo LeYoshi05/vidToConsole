@@ -26,6 +26,7 @@ chars = 60#to suit your needs.
 #------------------------
 
 fps = 60
+col_lim = 127
 
 def move (y, x):
     print("\033[%d;%dH" % (y, x))
@@ -66,25 +67,25 @@ def printFrame(frame):
                 if(colorEnabled == True):
                     if(vals[0] == 0 and vals[1] == 0 and vals[2] == 0):
                         out = out + colored('▓', 'grey')
-                    elif(vals[0] > 85):
-                        if(vals[1] > 85):
+                    elif(vals[0] > col_lim):
+                        if(vals[1] > col_lim):
                             out = out + colored('▓', 'yellow')
-                        elif(vals[2] > 85):
+                        elif(vals[2] > col_lim):
                             out = out + colored('▓', 'magenta')
                         else:
                             out = out + colored('▓', 'red')
 
-                    elif(vals[1] > 85):
-                        if(vals[2] > 85):
+                    elif(vals[1] > col_lim):
+                        if(vals[2] > col_lim):
                             out = out + colored('▓', 'cyan')
                         else:
                             out = out + colored('▓', 'green')
-                    elif(vals[2] > 85):
+                    elif(vals[2] > col_lim):
                             out = out + colored('▓', 'blue')
                     else:
                         out = out + (" ")
                 else:
-                    if(vals[0] < 127 and vals[1] < 127 and vals[2] < 127):
+                    if(vals[0] < col_lim and vals[1] < col_lim and vals[2] < col_lim):
                         out = out + colored('▓', 'grey')
                     else:
                         out = out + colored('▓', 'white')
